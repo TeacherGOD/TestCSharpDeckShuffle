@@ -1,5 +1,6 @@
-﻿using WebApplication3;
-using WebApplication3.Interfaces;
+﻿using WebApplication3.Interfaces;
+
+namespace WebApplication3.models;
 
 public class ShuffleProvider : IShuffle<Deck>
 {
@@ -11,6 +12,10 @@ public class ShuffleProvider : IShuffle<Deck>
     }
 }
 
+
+/// <summary>
+/// По неизвестной мне причине не работает. При этом, когда запускал в дебагере с Console.WriteLine, то сортировка происходила.
+/// </summary>
 public class ShuffleProviderReal : IShuffle<Deck>
 {
     public Deck ShuffleDeck(Deck deck)

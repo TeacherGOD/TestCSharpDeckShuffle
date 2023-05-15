@@ -1,4 +1,6 @@
-﻿namespace WebApplication3.Interfaces;
+﻿using WebApplication3.models;
+
+namespace WebApplication3.Interfaces;
 
 public interface IDecks
 {

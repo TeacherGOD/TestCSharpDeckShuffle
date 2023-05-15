@@ -1,4 +1,4 @@
-﻿namespace WebApplication3
+﻿namespace WebApplication3.models
 {
 public class Deck
 {

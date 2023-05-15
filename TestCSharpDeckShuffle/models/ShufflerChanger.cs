@@ -2,7 +2,7 @@
 
 using WebApplication3.Interfaces;
 
-namespace WebApplication3;
+namespace WebApplication3.models;
 
 public class ShufflerChanger : IShufflerChanger
 {

@@ -1,9 +1,9 @@
 ﻿using System.Text;
 using WebApplication3.Interfaces;
 
-namespace WebApplication3
+namespace WebApplication3.models
 {
-    public class Decks : IDecks
+     public class Decks : IDecks
 {
     //private List<Deck> Decks { get; } = new();
 
@@ -15,7 +15,7 @@ namespace WebApplication3
         this.Shuffler = shuffler;
     }
 
-    private Dictionary<string,Deck> AllDecksDictionary { get; } = new();
+    public Dictionary<string,Deck> AllDecksDictionary { get; } = new();
 
 
     public void DeleteDeck(string name)
@@ -51,10 +51,10 @@ namespace WebApplication3
         foreach (var deck in AllDecksDictionary)
         {
            //stringBuilder.Append(deck.Name);
-            stringBuilder.AppendFormat("{0} ",deck.Value.Name);
+            stringBuilder.AppendFormat("{0}, ",deck.Value.Name);
         }
 
-        //stringBuilder.Remove(stringBuilder.Length - 1, 1);
+        stringBuilder.Remove(stringBuilder.Length - 2, 2);
         
         return stringBuilder.ToString();
         
@@ -73,7 +73,10 @@ namespace WebApplication3
         return Shuffler.CurrentProvider.ShuffleDeck(GetDeck(name));
     }
 
-    
+    public override string ToString()
+    {
+        return AllDecksDictionary.ToString();
+    }
 }
 
 }

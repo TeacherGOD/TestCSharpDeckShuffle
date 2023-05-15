@@ -1,4 +1,4 @@
-﻿namespace WebApplication3
+﻿namespace WebApplication3.models
 {
     public class Card
     {
@@ -7,7 +7,7 @@
             Name = name;
         }
 
-        private string Name { get; }
+        public string Name { get; }
 
         public override string ToString()
         {
